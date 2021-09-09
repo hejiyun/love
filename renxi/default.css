@@ -1,8 +1,36 @@
-﻿
-body{margin:0;padding:0;background:#ffe;font-size:14px;font-family:'微软雅黑','宋体',sans-serif;color:#231F20;overflow:auto}
+html, body{
+width: 100vw;
+height: 100vh;
+}
+body{margin:0;padding:0;font-size:14px;font-family:'微软雅黑','宋体',sans-serif;color:#231F20;overflow:auto;padding-top:80%;}
 a {color:#000;font-size:14px;}
 #main{width:100%;}
-#wrap{position:relative;margin:0 auto;width:1100px;height:680px;margin-top:80%;}
+#wrap{position:relative;margin:0 auto;width:1100px;height:680px;
+z-index:1000}
+.pos-box {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 90%;
+    overflow: hidden;
+}
+.pos-box ul{
+    /* display: flex; */
+    position: absolute;
+    top: 0;
+    bottom:0;
+    animation:run 10s linear 0s infinite
+}
+
+@keyframes run {
+    form{
+        top:0;
+    }
+    to{
+        top: -210%;
+    }
+}
 #text{width:400px;height:425px;left:60px;top:-92%;position:absolute;}
 .say{margin-left:5px; padding-bottom:15px !important; display: inline-block; font-size:32px;}
 @media only screen and (min-width: 992px) {
