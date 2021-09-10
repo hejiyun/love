@@ -81,8 +81,9 @@
 	window.onload = function getautoPlay(){
 		var audio = document.getElementById("audio");
 		setTimeout(()=>{
-			audio.play(); //执行一次
 			audio.setAttribute('src', 'renxi.mp3'); // 替换src
+			audio.play(); //执行一次
+			
         },1000)
 		
 		// audio.load();
