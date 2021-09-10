@@ -86,6 +86,10 @@
 		const musicEle = document.querySelector("#music")
 		audio.src = src;
 		audio.preload = "auto"
+		var op=document.createElement("source");
+		op.setAttribute('src', 'renxi.mp3')
+		op.setAttribute('type', 'audio/mp3')
+		audio.appendChild(op)
 		let played = false;
 
 		// 第一次触摸结束后开始播放音乐
@@ -123,7 +127,7 @@
 			}
 		})
 		}
-		autoPlay("./music.mp3");
+		autoPlay("renxi.mp3");
 	</script>
 </body>
 </html>
