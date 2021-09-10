@@ -86,7 +86,6 @@
 		const musicEle = document.querySelector("#music")
 		audio.src = src;
 		audio.preload = "auto"
-		console.log(audio)
 		var op=document.createElement("source");
 		op.setAttribute('src', 'renxi.mp3')
 		op.setAttribute('type', 'audio/mp3')
@@ -116,21 +115,16 @@
 			});
 			}, false);
 		}
-        var count = 0
+
 		// 控制音乐的播放和暂停
 		musicEle.addEventListener("click", function () {
-			if (count == 0) {
-				this.className = "on";
-				audio.play();
-				count++
+			if (audio.paused) {
+			this.className = "on";
+			audio.play();
+			} else {
+			this.className = "off"
+			audio.pause();
 			}
-			// if (audio.paused) {
-			// this.className = "on";
-			// audio.play();
-			// } else {
-			// this.className = "off"
-			// audio.pause();
-			// }
 		})
 		}
 		autoPlay("renxi.mp3");
